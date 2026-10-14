@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    
+
+    <!-- Logo do aplicativo no topo da tela -->
     <ImageView
         android:id="@+id/logoAndroid"
         android:layout_width="wrap_content"
@@ -15,18 +16,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp" />
 
+    <!-- Título da aplicação -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Meu Primeiro App Android"
-        app:layout_constraintTop_toBottomOf="@+id/logoAndroid"
+        app:layout_constraintTop_toBottomOf="@id/logoAndroid"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
+    <!-- Campo de entrada para o e-mail -->
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
@@ -36,14 +39,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:hint="Digite o seu e-mail"
         android:inputType="textEmailAddress" />
 
+    <!-- Novo campo de entrada para a senha -->
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="Digite a sua senha"
+        android:inputType="textPassword" />
+
+    <!-- Botão de ação posicionado abaixo do campo de senha -->
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSenha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Entrar"
